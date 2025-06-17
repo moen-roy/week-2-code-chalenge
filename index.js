@@ -38,6 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
             };
             newTable.appendChild(deleteButton);
 
+            // attendance marking button
+            const attendanceBtn = document.createElement("button");
+                attendanceBtn.textContent = "Mark as Attending";
+
+            // Add a class to the button for styling
+           
+
+                let isAttending = false;
+
+                attendanceBtn.onclick = () => {
+                    isAttending = !isAttending; // attendance boolean
+
+                    newTable.style.background = isAttending ? "black" : "white";
+
+                    attendanceBtn.textContent = isAttending ? "Mark as Not Attending" : "Mark as Attending";
+                };
+                newTable.appendChild(attendanceBtn);
 
                  // Append the new list item to the guest list
             guestList.appendChild(newTable);
