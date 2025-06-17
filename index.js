@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
            
         }
 
-        
+        if (guestList.children.length >= 10) {
+           return alert("!Guest list is full!");
+        }
+          
     });
     
 });
