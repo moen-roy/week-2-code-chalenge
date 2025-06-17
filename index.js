@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const guestInfo = document.createElement("p");
           // sets the category of the guest
             // takes the input name and adds a timestamp
-            guestInfo.textContent = `${name} - ${category}  (added at:  ${new Date().toLocaleTimeString()})`;
+            // use of .innerHTML to allow HTML tags
+            guestInfo.innerHTML = `${name} - <span class= "color"> ${category}</span>  (added at:  ${new Date().toLocaleTimeString()})`;
             newG.appendChild(guestInfo);
         
             // guest removal button from table
