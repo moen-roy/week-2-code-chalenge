@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const input = document.getElementById("guestName");
 
         const guestList = document.getElementById("guestDisplay");
+        
+        const category = document.getElementById("category").value;
 
         const name = input.value.trim();
 
@@ -20,25 +22,27 @@ document.addEventListener("DOMContentLoaded", () => {
         if (guestList.children.length >= 10) {
            return alert("!Guest list is full!");
         }
-          // Creates a new  item table
-        const newTable = document.createElement("table");
+          // Creates a new  item div of class guest-entry
+        const newG = document.createElement("div");
+        newG.classList.add("guest-entry");
 
+          const guestInfo = document.createElement("p");
+          // sets the category of the guest
             // takes the input name and adds a timestamp
-            newTable.textContent = `${name} (added at:  ${new Date().toLocaleTimeString()})`;
+            guestInfo.textContent = `${name} - ${category}  (added at:  ${new Date().toLocaleTimeString()})`;
+            newG.appendChild(guestInfo);
         
             // guest removal button from table
-            
-            deleteButton.textContent = "Remove";
-
             const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Remove";
 
               // Add a class to the button for styling
             deleteButton.classList.add("btn");
 
             deleteButton.onclick= () =>{
-                guestList.removeChild(newTable);
+                guestList.removeChild(newG);
             };
-            newTable.appendChild(deleteButton);
+            newG.appendChild(deleteButton);
 
             // attendance marking button
             const attendanceBtn = document.createElement("button");
@@ -52,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 attendanceBtn.onclick = () => {
                     isAttending = !isAttending; // attendance boolean
 
-                    newTable.style.background = isAttending ? "black" : "white";
+                    newG.style.background = isAttending ? "white" : "black";
 
                     attendanceBtn.textContent = isAttending ? "Mark as Not Attending" : "Mark as Attending";
                 };
-                newTable.appendChild(attendanceBtn);
+                newG.appendChild(attendanceBtn);
 
                  // Append the new list item to the guest list
-            guestList.appendChild(newTable);
+            guestList.appendChild(newG);
 
             // Clear the input field after submission
             input.value = '';   
