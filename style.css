@@ -31,3 +31,10 @@ img {
     padding: 10px;
     margin-left: 20px;
 }
+#guestDisplay{
+    color:rgb(143, 15, 87);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
