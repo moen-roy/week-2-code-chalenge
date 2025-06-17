@@ -20,7 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
         if (guestList.children.length >= 10) {
            return alert("!Guest list is full!");
         }
-          
+          // Creates a new  item table
+        const newTable = document.createElement("table");
+
+            // takes the input name and adds a timestamp
+            newTable.textContent = `${name} (added at:  ${new Date().toLocaleTimeString()})`;
+        
+            // guest removal button from table
+            
+            deleteButton.textContent = "Remove";
+
+            // Add a class to the button for styling
+            deleteButton.classList.add("btn");
+
+            deleteButton.onclick= () =>{
+                guestList.removeChild(newTable);
+            };
+            newTable.appendChild(deleteButton);
+
+
+                 // Append the new list item to the guest list
+            guestList.appendChild(newTable);
+
+            // Clear the input field after submission
+            input.value = '';   
     });
     
 });
