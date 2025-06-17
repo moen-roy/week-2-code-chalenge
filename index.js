@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             deleteButton.textContent = "Remove";
 
-            // Add a class to the button for styling
+            const deleteButton = document.createElement("button");
+
+              // Add a class to the button for styling
             deleteButton.classList.add("btn");
 
             deleteButton.onclick= () =>{
@@ -42,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const attendanceBtn = document.createElement("button");
                 attendanceBtn.textContent = "Mark as Attending";
 
-            // Add a class to the button for styling
-           
+            // Add a class to the button for styling           
+            attendanceBtn.classList.add("btn");
 
                 let isAttending = false;
 
