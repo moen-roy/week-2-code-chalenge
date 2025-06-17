@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const name = input.value.trim();
 
-         
+          if (name.length=== 0) {
+          
+           alert("Please enter a name.");
+              return;
+           
+        }
+
+        
     });
     
 });
