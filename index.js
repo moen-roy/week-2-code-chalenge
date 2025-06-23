@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const newG = document.createElement("div");
         newG.classList.add("guest-entry");
 
-          const guestInfo = document.createElement("p");
+          const guestInfo = document.createElement("li");
           // sets the category of the guest
             // takes the input name and adds a timestamp
             // use of .innerHTML to allow HTML tags
-            guestInfo.innerHTML = `${name} - <span class= "color"> ${category}</span>  (added at:  ${new Date().toLocaleTimeString()})`;
+            guestInfo.innerHTML = `${name} - <span class= "color"> ${category}</span>  (added at:  ${new Date().toLocaleString()})`;
             newG.appendChild(guestInfo);
         
             // guest removal button from table
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
             deleteButton.onclick= () =>{
                 guestList.removeChild(newG);
             };
-            newG.appendChild(deleteButton);
-
+            newG.appendChild(deleteButton);  
+            
             // attendance marking button
             const attendanceBtn = document.createElement("button");
                 attendanceBtn.textContent = "Mark as Attending";
