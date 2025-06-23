@@ -13,10 +13,10 @@ This project is a Guest List Management web application that allows users to org
 
 ## Features
 
-- Add new guests with name and category
+- Add new guests with name and category by submitting the name.
 - Categorize guests as Friends, Family, or Colleagues
 - View guests by category
-- Remove guests from the list
+- Remove guests from the list using the remove button
 - Responsive and user-friendly interface
 
 ## Getting Started
