@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 attendanceBtn.onclick = () => {
                     isAttending = !isAttending; // attendance boolean
 
-                    newG.style.background = isAttending ? "white" : "black";
+                    newG.style.background = isAttending ? "black" : "none";
 
                     attendanceBtn.textContent = isAttending ? "Mark as Not Attending" : "Mark as Attending";
                 };
