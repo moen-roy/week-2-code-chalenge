@@ -1,11 +1,15 @@
 body {
-    background-color: black;
+    background-image: url("https://media.istockphoto.com/id/1446478827/photo/a-chef-is-cooking-in-his-restaurants-kitchen.jpg?s=612x612&w=0&k=20&c=jwKJmGErrLe2XsTWNYEEyiNicudYVA4j8jvnTiJdp58=");
+    background-repeat:no-repeat;
+    background-size: cover;
     font-family: Arial, sans-serif;
     color: yellowgreen;    
+
 }
 
 h1{
-    color: blue;
+    color: rgb(190, 6, 6);
+    font-weight:bold;
     font-size: 30px;
     text-align: center;
     margin-bottom: 100px;
@@ -17,7 +21,7 @@ h1{
 }
 img {
     margin: 0 auto; 
-    width: 50px;
+    width: 100px;
     height: auto;
     display: block;
     margin-top: 20px;
@@ -35,7 +39,7 @@ img {
     color: yellowgreen;
 }
 #guestDisplay{
-    color:rgb(143, 15, 87);
+    color: white;
     font-size: 20px;
     font-weight: bold;
     position: relative;
